@@ -3,15 +3,15 @@
   "version": "0.0.1",
   "main": "lib/download-progress.js",
   "description": "Download files while displaying progress bar on the command line (new download-progress)",
-  "homepage": "https://github.com/PhilippeAssis/download-progress",
-  "bugs": "https://github.com/PhilippeAssis/download-progress/issues",
+  "homepage": "https://github.com/PhilippeAssis/download-progress-bar",
+  "bugs": "https://github.com/PhilippeAssis/download-progress-bar/issues",
   "author": {
     "name": "Philippe Assis",
     "email": "assis@philippeassis.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/PhilippeAssis/download-progress"
+    "url": "https://github.com/PhilippeAssis/download-progress-bar"
   },
   "licenses": [
     {
