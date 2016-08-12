@@ -1,46 +1,34 @@
-# download-progress (http://travis-ci.org/AYapejian/download-progress)
+# download-progress-bar
 
-Download files while displaying progress bar on the command line
+This is a [download-progress](https://github.com/AYapejian/download-progress) fork with improvements and modifications
 
-## Getting Started
-Install the module with: `npm install download-progress`
+What improvements? Apparently the origin of this module is incomplete, for example, there is no option module configurations so far.
+
+Now, to set the module simply pass a json as second attribute
 
 ```javascript
-var DownloadProgress = require('../lib/download-progress.js');
-
+var DownloadProgress = require('download-progress-bar');
 var urls = [
-	{
-		url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-win-ia32.zip',
-		dest: 'node-webkit-v0.7.5-win-ia32.zip'
-	}, {
-		url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-linux-ia32.tar.gz',
-		dest: 'node-webkit-v0.7.5-linux-ia32.tar.gz'
-	}, {
-		url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-osx-ia32.zip',
-		dest: 'node-webkit-v0.7.5-osx-ia32.zip'
-	}
+    {
+        url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-win-ia32.zip',
+        dest: 'node-webkit-v0.7.5-win-ia32.zip'
+    }, {
+        url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-linux-ia32.tar.gz',
+        dest: 'node-webkit-v0.7.5-linux-ia32.tar.gz'
+    }, {
+        url: 'https://s3.amazonaws.com/node-webkit/v0.7.5/node-webkit-v0.7.5-osx-ia32.zip',
+        dest: 'node-webkit-v0.7.5-osx-ia32.zip'
+    }
 ];
 
-var options = {};
+var options = {
+	layout: '[:bar] :percent :etas', // https://github.com/visionmedia/node-progress#tokens
+	displayMessage: fase,
+	complete: // https://github.com/visionmedia/node-progress#options
+	incomplete: // https://github.com/visionmedia/node-progress#options
+	width: // https://github.com/visionmedia/node-progress#options
+	total: // https://github.com/visionmedia/node-progress#options
+}
+
 var download = DownloadProgress(urls, options);
-
-download.get(function (err) {
-	if (err) { throw new Error(err); }
-	console.log('DONE');
-});
 ```
-
-## Documentation
-_(Coming soon)_
-
-## Examples
-_(Coming soon)_
-
-## Contributing
-
-
-## Release History
-0.0.0 Initial release, basic functionality
-
-## License
-Copyright (c) 2013 Ara Yapejian. Licensed under the MIT license.
