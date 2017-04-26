@@ -1,6 +1,6 @@
 {
   "name": "download-progress-bar",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/download-progress.js",
   "description": "Download files while displaying progress bar on the command line (new download-progress)",
   "homepage": "https://github.com/PhilippeAssis/download-progress-bar",
